@@ -6,13 +6,11 @@ services:
       - "8080:8080"
 #    volumes:
 #      - .:/usr/src/app
-    network_mode: bridge
     depends_on:
       - redis
 
   redis:
     container_name: redis-container
-    network_mode: bridge
     image: "redis:7.0.4"
     expose: 
       - 6379
